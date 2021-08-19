@@ -1,0 +1,20 @@
+{
+  port: 3002,
+  storage: "mongo",
+  mongo: {
+    url: "mongodb+srv://oterem:oterem@cluster0.nolnl.mongodb.net/users?retryWrites=true&w=majority",
+    dbName: "users"
+  },
+  remoteServices: {
+    server2: {
+      baseUrl: "http://localhost:3005",
+      apis: {
+        getSettings: {
+          method: 'GET',
+          url: "settings"
+        }
+      },
+
+    }
+  }
+}
